@@ -20,15 +20,16 @@ export class UsersService {
     return this.usersList;
   }
 
-  findOne(id: number) {
+  findOne(userId: number) {
     return this.usersList.filter((e) => e.userId == userId);
+  }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
+  update(userId: number, updateUserDto: UpdateUserDto) {
     const user = this.usersList.find((e) => e.userId == userId);
     if (!user) {
       throw new Error('user not found');
     }
-    user.name = updateuserDto.name;
+    user.name = updateUserDto.name;
     return `updated user ${userId} updated to ${user.name} successfully`;
   }
 
