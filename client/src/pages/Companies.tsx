@@ -57,7 +57,6 @@ const companiesList = companies.map(
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Companies page" message="Whatever" />
-
         <ListContainer/>
       </IonContent>
       <IonContent>{companiesList}</IonContent>
