@@ -31,14 +31,11 @@ const Companies: React.FC = () => {
 }, []);
 
 const companiesList = companies.map(
-  (element:any) => {
+  (element:any, index) => {
       return (
-          <ul >
-              <li>
-                Company ID:{element.companyId}
-              </li>
-              <li>
-                Name:{element.name}
+          <ul key={element.name}>
+              <li key={index}>
+                Company ID:{element.companyId} | Name:{element.name}
               </li>
           </ul>
       )
